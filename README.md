@@ -10,7 +10,7 @@ Apart from making the process of querying easy for end users we also provide con
   - Queue - Apache Kafka
 
 
-### System Architecture
+## System Architecture
 
 ![Image of System Architecture](https://i.ibb.co/k8b8kqL/System-architecture.png)
 
@@ -31,7 +31,7 @@ Salient features of the system include the following -
 
 ![Concept Drift Image](https://i.ibb.co/McRwywP/Trump-Timeline.png)
 
-
+The figure illustrates the change in word distribution for tweets related to Donald Trump. The seed phrase used in the figure is “donald trump” and the intent dictionary contains phrases related to 3 topics - politics, policy and media. As can be inferred from the figure there is a wide variation in the key phrases used in the tweets for a duration of 9 months, the tweets during the period of October to December 2018 mostly deal with votes and making America great again, whereas during the first quarter of 2019 the tweets have centered around the border wall with Mexico. More recently, they have focused on the Chinese trade war and the Huawei ban. It is this concept-drift which makes it non-trivial to use fixed query phrases for fetching data for a given topic. Our approach to remedy this problem involves scheduling regular executions of our seed phrase update algorithm so that our query phrases are always in an updated state. A better approach will be to explicitly model this concept-drift and update the query phrases only when drift is statistically significant, this is something which we would like to explore in the future.
 
 
 ```markdown
