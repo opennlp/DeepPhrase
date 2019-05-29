@@ -1,3 +1,3 @@
 theme: jekyll-theme-minimal
-show_downloads: false
+show_downloads: true
 description: Using Neural Representations for Generating Intent Based Query Phrases
