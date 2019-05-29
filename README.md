@@ -1,8 +1,14 @@
-## Welcome to GitHub Pages
+## DeepPhrase - A Framework for Using Neural Representations for Generating Intent-based Query Phrases
 
-You can use the [editor on GitHub](https://github.com/opennlp/DeepPhrase/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+DeepPhrase is a generic framework for leveraging the power of Neural Representations for tuning query phrases and making them more compatible with user defined intent. Presently the framework supports a set of social channels (i.e. Twitter, Reddit) and news sources.
+This is an important component of our JourneysDataLayer backend, but can be used independently for a variety of user applications. Check out details about our Journeys application for more details about the project and its philosophy.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Apart from making the process of querying easy for end users we also provide connectors to persistence stores so that users can push the collected data and query phrases to the data store of their choice. Currently we support the following data storage options, with more connectors coming soon.
+
+  - Databases - MongoDB
+  - Inmemory Data Store -Redis
+  - Queue - Apache Kafka
+
 
 ### Markdown
 
