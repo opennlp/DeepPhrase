@@ -14,7 +14,22 @@ Apart from making the process of querying easy for end users we also provide con
 
 ![Image of System Architecture](https://i.ibb.co/k8b8kqL/System-architecture.png)
 
-The framework is designed to make it easy to plug in several alternate algorithms at each stage of the pipeline. For example the user has the choice of selecting from a whole list of alternate word/sentence embedding algorithms. The choice of persistence store and the data source (i.e. social channels and new sources) is also configurable by a given user. The data flow in the system starts when the user provides the seed query phrase and intent-phrase dictionary as input to the phrase augmenter server. The server then uses a set of APIs to query the external servers and fetch the necessary data. Once the data is fetched from the external servers (i.e. Twitter, Reddit, News etc.) we pass it through our seed phrase updating algorithm which generates candidate query phrases to append to the seed phrase for each given intent. With this set of updated seed phrases the process is iteratively repeated to finally settle on a given set of phrases corresponding to a given intent. Additionally, the user has the option of storing this fetched data in a persistence store for future use or otherwise
+The framework is designed to make it easy to plug in several alternate algorithms at each stage of the pipeline. For example the user has the choice of selecting from a whole list of alternate word/sentence embedding algorithms. The choice of persistence store and the data source (i.e. social channels and new sources) is also configurable by a given user. The data flow in the system starts when the user provides the seed query phrase and intent-phrase dictionary as input to the phrase augmenter server. The server then uses a set of APIs to query the external servers and fetch the necessary data. Once the data is fetched from the external servers (i.e. Twitter, Reddit, News etc.) we pass it through our seed phrase updating algorithm which generates candidate query phrases to append to the seed phrase for each given intent. With this set of updated seed phrases the process is iteratively repeated to finally settle on a given set of phrases corresponding to a given intent. Additionally, the user has the option of storing this fetched data in a persistence store for future use or otherwise.
+
+## System Features
+
+Salient features of the system include the following - 
+
+1. Support for multiple word/sentence embeddings, presently we support the following embeddings - 
+    - Word2Vec
+    - GloVe
+    - FastText
+    - Universal Sentence Encoder
+2. Mutliple Connectors for data persistence
+
+3. Inbuilt Support for Concept Drift - users have the option to schedule the update to their query phrases so that we can naturally deal with the problem of concept drift.
+
+![Concept Drift Image](https://i.ibb.co/McRwywP/Trump-Timeline.png)
 
 
 
