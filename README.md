@@ -44,6 +44,22 @@ pip install -r requirements.txt
 4. Copy the models to the models folder in the repository
 5. Add your API keys (for Twitter, Reddit and/or News API) in the file keys.py under the config package.
 
+## Usage and Code
+
+TODO
+
+## Experimental Results
+
+In order to qualitatively evaluate the efficacy of our phrase augmenting algorithm we decided to carry out a crowdsourcing experiment on Amazon Mechanical Turk, where the workers where asked to label a given post as either relevant or irrelevant to the user intent given the seed phrase and intent-phrase dictionary as the supplementary material. For the purpose of this experiment the seed phrase used is “adobe photoshop” and the intents revolve around the following topics – design, image, photography. Each post has been rated by three workers (rated as being relevant to the user intent or not i.e. binary classification) and the inter-rater reliability has been measured in terms of Fleiss’s Kappa. We have used Fleiss’s Kappa instead of Cohen’s Kappa as it generalizes well beyond two raters and accounts for the case when the ratings are done by random workers (which is almost always the case in a crowdsourced setting). The Fleiss’s Kappa is always in the range of 0 to 1, with values greater than 0.4 denoting some degree of agreement among raters. The baseline used for comparison is the case of using the vanilla seed phrase without our proposed augmenting algorithm. 
+
+
+Vectorizer	| Ratio of Improvement (in %)	| Fleiss’s Kappa
+--------- | --------------------------- | --------------
+GloVe |	58.42 |	0.71
+FastText |	56.53 |	0.67
+Word2Vec |	57.55	| 0.77
+Universal Sentence Encoder |	54.23	| 0.63
+
 ## Roadmap
 
   * Add support for more neural representation models - BERT, ELMo, Doc2Vec, Flair and CoVe
