@@ -33,30 +33,16 @@ Salient features of the system include the following -
 
 The figure illustrates the change in word distribution for tweets related to Donald Trump. The seed phrase used in the figure is “donald trump” and the intent dictionary contains phrases related to 3 topics - politics, policy and media. As can be inferred from the figure there is a wide variation in the key phrases used in the tweets for a duration of 9 months, the tweets during the period of October to December 2018 mostly deal with votes and making America great again, whereas during the first quarter of 2019 the tweets have centered around the border wall with Mexico. More recently, they have focused on the Chinese trade war and the Huawei ban. It is this concept-drift which makes it non-trivial to use fixed query phrases for fetching data for a given topic. Our approach to remedy this problem involves scheduling regular executions of our seed phrase update algorithm so that our query phrases are always in an updated state. A better approach will be to explicitly model this concept-drift and update the query phrases only when drift is statistically significant, this is something which we would like to explore in the future.
 
+## Steps to Install and Use
 
+1. git clone the repository to your local system
+2. Run the following command to install all dependencies - 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+pip install -r requirements.txt
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/opennlp/DeepPhrase/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+3. Download the pretrained models from [here](https://tinyurl.com/y2mlnhdf)
+4. Copy the models to the models folder in the repository
+5. Add your API keys (for Twitter, Reddit and/or News API) in the file keys.py under the config package.
 
 ### Support or Contact
 
