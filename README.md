@@ -25,7 +25,7 @@ Salient features of the system include the following -
     - GloVe
     - FastText
     - Universal Sentence Encoder
-2. Mutliple Connectors for data persistence
+2. Mutliple Connectors for data persistence - MongoDB, Redis, Apache kafka
 
 3. Inbuilt Support for Concept Drift - users have the option to schedule the update to their query phrases so that we can naturally deal with the problem of concept drift.
 
@@ -44,6 +44,13 @@ pip install -r requirements.txt
 4. Copy the models to the models folder in the repository
 5. Add your API keys (for Twitter, Reddit and/or News API) in the file keys.py under the config package.
 
+## Roadmap
+
+  * Add support for more neural representation models - BERT, ELMo, Doc2Vec, Flair and CoVe
+  * Support more database backends like MySQL, CouchDB, Apache Cassandra
+  * Add support for indexing the data into a ElasticSearch cluster
+  * Model the concept-drift explictly using a GAN or AutoEncoder
+  
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
