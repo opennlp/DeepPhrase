@@ -61,15 +61,22 @@ Word2Vec |	0.57	| 0.77
 Universal Sentence Encoder |	0.54	| 0.63
 
 ### Convergence Measures per Iteration Basis
-<hr/>
 
 <p float="left">
-  <img src="https://i.ibb.co/p3cCSyL/wordlist.png" width="200" />
+  <img src="https://i.ibb.co/p3cCSyL/wordlist.png" width="150" />
   <img src="https://i.ibb.co/H7LNrMN/figure-2.png" width="200" /> 
-  <img src="https://i.ibb.co/4gzq8sd/figure-3.png" width="200" />
+  <img src="https://i.ibb.co/4gzq8sd/figure-3.png" width="150" />
 </p>
 
 The first figure shows some sample phrases which are appended to the seed query phrase “adobe photoshop” after the first iteration (for Reddit), it can be clearly seen that each phrase is totally pertinent to a given intent. The next figure shows the change in calinski-harabasz index with every iteration for Reddit, results for all the embeddings have been juxtaposed to get a better view of how changing the underlying embedding reflects on the cluster compactness. It can be inferred from the figure that after 3-4 iterations the algorithm converges, irrespective of the sentence/word representation used. The last graph shows results for topic modeling under the same settings as for KMeans version of the algorithm, the coherence measure shown is the average of all coherence values of the topics.
+
+### Cluster Visualization
+
+<p float="left">
+  <img src="https://i.ibb.co/FXVcRB1/Reddit-KMeans-Photoshop.png" width="150" />
+  <img src="https://i.ibb.co/Cm310L0/Reddit-KMeans-Photoshop-2.png" width="150" /> 
+  <img src="https://i.ibb.co/hXb4RMc/Reddit-KMeans-Photoshop-3.png" width="150" />
+</p>
 
 ## Roadmap
 
