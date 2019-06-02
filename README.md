@@ -78,6 +78,8 @@ The first figure shows some sample phrases which are appended to the seed query 
   <img src="https://i.ibb.co/hXb4RMc/Reddit-KMeans-Photoshop-3.png" width="150" />
 </p>
 
+The series of figures illustrates the evolution of the clusters corresponding to each intent using the KMeans version of our algorithm. The channel under consideration is Reddit and the underlying word embedding is GloVe. The seed keyphrase is "adobe photoshop" and the intents revolve around 3 topics - design, image and photography. As can be seen from the figure at each iteration the clusters become more well organized and separated. The keywords converge after about 3-4 iterations.
+
 ## Roadmap
 
   * Add support for more neural representation models - BERT, ELMo, Doc2Vec, Flair and CoVe
