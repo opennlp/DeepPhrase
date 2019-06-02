@@ -60,6 +60,7 @@ FastText |	0.56 |	0.67
 Word2Vec |	0.57	| 0.77
 Universal Sentence Encoder |	0.54	| 0.63
 
+### Convergence Measures per Iteration Basis
 <hr/>
 
 <p float="left">
