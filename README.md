@@ -46,7 +46,45 @@ pip install -r requirements.txt
 
 ## Usage and Code
 
-TODO
+``` python
+
+def augment_seed_phrase():
+    channel_name_list = ["reddit"]
+    seed_phrase_list = ["adobe photoshop"]
+    intent_dict = dict({'design': "design creative",
+                        "image": "edit layer filter image",
+                        "photography": "photography tool"})
+    cluster_algorithm_list = ["kmeans", "lda"]
+    embedding_model_list = ["glove"]
+    ngram_value = 3
+    num_iterations = 10
+    similarity_measure = 'cosine'
+
+    for channel_name in channel_name_list:
+        for clustering_algorithm in cluster_algorithm_list:
+            for embedding_model in embedding_model_list:
+                try:
+                    generate_iterative_seed(channel_name=channel_name,
+                                            seed_phrase_list=seed_phrase_list,
+                                            intent_dict=intent_dict,
+                                            num_iterations=num_iterations,
+                                            ngram_value=ngram_value,
+                                            cluster_algorithm=clustering_algorithm,
+                                            embedding_model=embedding_model, 
+                                            similarity_measure=similarity_measure,
+                                            storage_type=modelconstants.QUEUE_STORAGE_TYPE)
+                except Exception as e:
+                    LOGGER.info("An exception occured in seed augment %s " % str(e))
+                    
+
+
+from periodicschedule import scheduleupdate
+from constants import modelconstants
+
+if __name__ == '__main__':
+    scheduleupdate.update_scheduler(augment_seed_phrase, time_quantum_unit='minutes', time_quantum=30)
+    
+ ```
 
 ## Experimental Results
 
