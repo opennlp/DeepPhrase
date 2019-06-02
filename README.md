@@ -1,7 +1,7 @@
 ## DeepPhrase - A Framework for Using Neural Representations for Generating Intent-based Query Phrases
 
 DeepPhrase is a generic framework for leveraging the power of Neural Representations for tuning query phrases and making them more compatible with user defined intent. Presently the framework supports a set of social channels (i.e. Twitter, Reddit) and news sources.
-This is an important component of our JourneysDataLayer backend, but can be used independently for a variety of user applications. Check out details about our Journeys application for more details about the project and its philosophy.
+This is an important component of our [JourneysDataLayer](https://github.com/opennlp/JourneysDataLayer) backend, but can be used independently for a variety of user applications. Check out details about our Journeys application for more details about the project and its philosophy.
 
 Apart from making the process of querying easy for end users we also provide connectors to persistence stores so that users can push the collected data and query phrases to the data store of their choice. Currently we support the following data storage options, with more connectors coming soon.
 
