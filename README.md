@@ -64,7 +64,7 @@ Universal Sentence Encoder |	0.54	| 0.63
 
 <p float="left">
   <img src="https://i.ibb.co/p3cCSyL/wordlist.png" width="150" />
-  <img src="https://i.ibb.co/H7LNrMN/figure-2.png" width="200" /> 
+  <img src="https://i.ibb.co/H7LNrMN/figure-2.png" width="150" /> 
   <img src="https://i.ibb.co/4gzq8sd/figure-3.png" width="150" />
 </p>
 
