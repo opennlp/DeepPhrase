@@ -3,7 +3,7 @@ numpy==1.15.4
 tweepy==3.7.0
 praw==5.3.0
 newsapi==0.1.1
-requests==2.21.0
+requests==2.31.0
 gensim==3.4.0
 pyldavis==2.1.2
 pymongo==3.6.1
